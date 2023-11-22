@@ -1,0 +1,8 @@
+streamlit
+opencv-python
+numpy
+Pillow
+cmake
+dlib
+face-recognition
+os
