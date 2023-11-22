@@ -6,14 +6,14 @@ import face_recognition
 import os
 
 # Load the face recognition model
-face_1 = face_recognition.load_image_file("E:/Void - Hack/face-recognition/pro-pic.jpeg")
+face_1 = face_recognition.load_image_file("pro-pic.jpeg")
 face_1_encoding = face_recognition.face_encodings(face_1)[0]
 
 known_face_encodings = [face_1_encoding]
 known_face_names = ["mubeen"]
 
 # Define the directory containing real fingerprint images
-real_images_dir = "E:/Void - Hack/face-recognition/Fingerprint - database"
+real_images_dir = "Fingerprint - database"
 def redirect_button(url: str, text: str= None, color="rgb(19, 23, 67)"):
     st.markdown(
     f"""
@@ -181,8 +181,7 @@ def main():
         cap.release()
 
     if fingerprint_done and face_done:
-        # st.markdown('Next{:target="_blank"}', unsafe_allow_html=True)
-        redirect_button("http://stackoverflow.com","Next")
+        redirect_button("http://localhost/votesystem/","Next")
 
 if __name__ == "__main__":
     main()
